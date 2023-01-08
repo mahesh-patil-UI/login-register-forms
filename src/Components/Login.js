@@ -22,31 +22,32 @@ const Login = () => {
 		<h1>Login</h1>
 	</div>
 
-	
-	<form onSubmit={handleLogin}>
-		{/* Labels and inputs for form data */}
-		
-		<label className="label">Email</label>
-		<input name="email" value={input.email} onChange={(e) => 
-        setInput({
-            ...input,
-            [e.target.name] : e.target.value})} className="input"
-		type="email" />
+	<div className='wrapper'>
+        <form onSubmit={handleLogin} className="myForm">
+            {/* Labels and inputs for form data */}
+            
+            <label className="label">Email</label>
+            <input name="email" value={input.email} onChange={(e) => 
+            setInput({
+                ...input,
+                [e.target.name] : e.target.value})} className="input"
+            type="email" />
 
-		<label className="label">Password</label>
-		<input name="password" value={input.password} onChange={(e) => 
-        setInput({
-            ...input,
-            [e.target.name] : e.target.value})} className="input"
-		type="password" />
-        <br/>
-		<button onClick={handleLogin} className="btn btn-primary" type="submit">
-		Submit
-		</button>
-        <p>Dont have an account?
-            <Link to="/register"><u>Register Here</u></Link>
-        </p>
-	</form>
+            <label className="label">Password</label>
+            <input name="password" value={input.password} onChange={(e) => 
+            setInput({
+                ...input,
+                [e.target.name] : e.target.value})} className="input"
+            type="password" />
+            <br/>
+            <button onClick={handleLogin} className="btn btn-primary" type="submit">
+            Submit
+            </button>
+            <p>Dont have an account?
+                <Link to="/register"><u>Register Here</u></Link>
+            </p>
+        </form>
+    </div>
 	</div>
   )
 }

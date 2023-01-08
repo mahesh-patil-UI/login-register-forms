@@ -1,5 +1,6 @@
 import React from 'react';
 import {useNavigate } from 'react-router-dom';
+import Crudoperations from './Crudoperations';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -9,10 +10,11 @@ const Home = () => {
         navigate("/login");
     }
   return (
-    <div style={{textAlign:'center'}}>Welcome - {userName.name}
-    <button onClick={handleLogout} type="button" className='btn btn-primary'>Logout</button>
-    </div>
-    
+    <><div style={{ textAlign: 'center' }}>Welcome - {userName.name}
+      <button onClick={handleLogout} type="button" className='btn btn-primary'>Logout</button>
+    </div><>
+        <Crudoperations />
+      </></>
   )
 }
 
